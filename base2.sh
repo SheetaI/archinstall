@@ -17,9 +17,6 @@ passwd
 
 pacman -S --noconfirm networkmanager git terminus-font neofetch
 
-
-## === Systemd Bootloader === ##
-
 bootctl --path=/boot install
 
 cat <<EOF > /boot/loader/loader.conf
