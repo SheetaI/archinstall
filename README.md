@@ -1,5 +1,5 @@
 # archinstall
-My personal automated install script.
+My personal automated arch linux installation script.
 
 **Pre-requisites:**
 `Arch ISO` & `Internet Connection`
