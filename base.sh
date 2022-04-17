@@ -39,4 +39,4 @@ chmod +x /mnt/base2.sh
 
 arch-chroot /mnt /bin/bash -c ./base2.sh
 
-# continuation on base.2sh #
+# continuation on base2.sh #
