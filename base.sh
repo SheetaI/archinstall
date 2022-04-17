@@ -1,7 +1,5 @@
 # == MY ARCH SETUP INSTALLER == #
 
-printf '\033c'
-echo "Welcome to arch installer script"
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 loadkeys us
 timedatectl set-ntp true
@@ -19,5 +17,10 @@ mount /dev/sda1 /mnt/boot
 
 pacstrap /mnt base base-devel linux linux-firmware vim intel-ucode
 genfstab -U /mnt >> /mnt/etc/fstab
+
+cp base2.sh /mnt
+chmod +x /mnt/base2.sh
+
+arch-chroot /mnt /bin/bash -c ./base2.sh
 
 
