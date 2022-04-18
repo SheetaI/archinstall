@@ -1,5 +1,5 @@
 # Font Rendering #
-cat <<EOF | sudo tee -a > /etc/fonts/local.conf
+sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
@@ -21,7 +21,7 @@ cat <<EOF | sudo tee -a > /etc/fonts/local.conf
     </edit>
   </match>
 </fontconfig>
-EOF
+EOF'
 
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
