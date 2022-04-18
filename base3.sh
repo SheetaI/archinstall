@@ -1,5 +1,5 @@
 # Font Rendering #
-sudo cat <<EOF > /etc/fonts/local.conf
+cat <<EOF | sudo tee -a > /etc/fonts/local.conf
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
