@@ -1,18 +1,8 @@
-#!/bin/bash
-
-# Prepairing Personalization #
-ai3_path=/home/sheetal/base3.sh
-sed '1,/^#part3$/d' base3.sh > $ai3_path
-chown sheetal:sheetal $ai3_path
-chmod +x $ai3_path
-su -c $ai3_path -s /bin/sh $username
-exit
-
-pacman -S --noconfirm sed
+sudo pacman -S --noconfirm sed
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
 # Install Essentials #
-pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
+sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
  networkmanager git bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
  firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
  gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
@@ -20,8 +10,8 @@ pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-g
  qbittorrent gimp veracrypt obsidian neofetch firewalld
 
 # Start Network Service #
-systemctl enable NetworkManager	
-systemctl firewalld
+sudo systemctl enable NetworkManager	
+sudo systemctl firewalld
 
 # AUR Helper #
 printf '\033c'
@@ -80,7 +70,7 @@ sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
 
 # Enable services #
-systemctl lightdm
+sudo systemctl lightdm
 
 ## End ##
 exit
