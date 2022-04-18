@@ -6,7 +6,7 @@ loadkeys us
 timedatectl set-ntp true
 
 # Partitions: 100MB=BOOT, 4GB=SWAP, remaining=ROOT #
-echo -e "o\ny\nn\n \n \n+100M\nef00\nn\n \n \n+4G\n8200\nn\n \n \n \n8300\nw\ny" | gdisk /dev/vda
+echo -e "o\ny\nn\n \n \n+100M\nef00\nn\n \n \n+4G\n8200\nn\n \n \n \n8300\nw\ny" | gdisk /dev/sda
 
 # Format: Physical Machine #
 mkfs.fat -F32 /dev/sda1		
