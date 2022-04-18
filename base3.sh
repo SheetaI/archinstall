@@ -31,7 +31,7 @@ cd $HOME
 yay -S polybar ani-cli timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
-cat <<EOF > /etc/fonts/local.conf
+sudo cat <<EOF > /etc/fonts/local.conf
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
