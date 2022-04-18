@@ -18,5 +18,5 @@ My personal automated arch linux installation script.
 
  - **Done!**
 
-*Note: Setup will prompt for username & password.
+**Note:** Setup will prompt for username & password.
 
