@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# Prepairing Personalization #
+ai3_path=/home/sheetal/base3.sh
+sed '1,/^#part3$/d' base3.sh > $ai3_path
+chown sheetal:sheetal $ai3_path
+chmod +x $ai3_path
+su -c $ai3_path -s /bin/sh $username
+exit
+
 pacman -S --noconfirm sed
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 
@@ -14,23 +22,6 @@ pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-g
 # Start Network Service #
 systemctl enable NetworkManager	
 systemctl firewalld
-
-# User & Password Setup #
-read -p "Enter username: " user
-useradd -m $user
-usermod -aG wheel $user
-sed -i '/%wheel/s/^#//' /etc/sudoers
-read -p "Enter password: " pass
-echo -e "$pass\n$pass" | passwd $user
-passwd -l root
-
-# Prepairing Personalization #
-ai3_path=/home/sheetal/base3.sh
-sed '1,/^#part3$/d' base3.sh > $ai3_path
-chown sheetal:sheetal $ai3_path
-chmod +x $ai3_path
-su -c $ai3_path -s /bin/sh $username
-exit
 
 # AUR Helper #
 printf '\033c'
