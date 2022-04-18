@@ -1,10 +1,10 @@
 # archinstall
 My personal automated arch linux installation script.
 
-**Pre-requisites:**
+  - **Pre-requisites:**
 `Arch ISO` & `Internet Connection`
 
-**Boot the ISO & run the ff:**
+  - **Boot the ISO & run the ff:**
 
 `pacman -Syy`
 
@@ -15,3 +15,8 @@ My personal automated arch linux installation script.
 `cd archinstall`
 
 `bash base.sh`
+
+  - **Done!**
+
+
+
