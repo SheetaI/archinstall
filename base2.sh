@@ -25,22 +25,22 @@ default arch-*
 EOF
 
 # For Physical Machine #
-# cat <<EOF > /boot/loader/entries/arch.conf
-# title    Arch Linux
-# linux    /vmlinuz-linux
-# initrd   /intel-ucode.img
-# initrd   /initramfs-linux.img
-# options  root=/dev/sda3 rw
-# EOF
-
-# For Virtual Machine #
 cat <<EOF > /boot/loader/entries/arch.conf
 title    Arch Linux
 linux    /vmlinuz-linux
 initrd   /intel-ucode.img
 initrd   /initramfs-linux.img
-options  root=/dev/vda3 rw
+options  root=/dev/sda3 rw
 EOF
+
+# For Virtual Machine #
+# cat <<EOF > /boot/loader/entries/arch.conf
+# title    Arch Linux
+# linux    /vmlinuz-linux
+# initrd   /intel-ucode.img
+# initrd   /initramfs-linux.img
+# options  root=/dev/vda3 rw
+# EOF
 
 # Start Network Service #
 systemctl enable NetworkManager	
