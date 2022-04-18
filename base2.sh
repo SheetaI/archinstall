@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Setup continuation ... #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 hwclock --systohc											
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
@@ -13,10 +14,9 @@ cat <<EOF > /etc/hosts
 127.0.1.1 arch.localdomain  arch
 EOF
 
-passwd
-
 pacman -S --noconfirm networkmanager git terminus-font neofetch
 
+# Systemd Bootlader Setup #
 bootctl --path=/boot install
 
 cat <<EOF > /boot/loader/loader.conf
@@ -42,11 +42,10 @@ initrd   /initramfs-linux.img
 options  root=/dev/vda3 rw
 EOF
 
-## === Start Services on Boot === ##
+# Start Network Service #
 systemctl enable NetworkManager	
 
-# user & pass
-
+# User & Password Setup #
 read -p "Enter username: " user
 useradd -m $user
 usermod -aG wheel $user
@@ -56,5 +55,5 @@ echo -e "$pass\n$pass" | passwd $user
 # lock root account
 passwd -l root
 
-## end ##
+## End ##
 exit
