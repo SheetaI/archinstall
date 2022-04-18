@@ -1,22 +1,22 @@
 # archinstall
 My personal automated arch linux installation script.
 
-  - **Pre-requisites:**
+ - **Pre-requisites:**
 `Arch ISO` & `Internet Connection`
 
-  - **Boot the ISO & run the ff:**
+ - **Boot the ISO & run the ff:**
 
-`pacman -Syy`
+    `pacman -Syy`
 
-`pacman -S git`
+    `pacman -S git`
 
-`git clone https://github.com/SheetaI/archinstall`
+    `git clone https://github.com/SheetaI/archinstall`
 
-`cd archinstall`
+    `cd archinstall`
 
-`bash base.sh`
+    `bash base.sh`
 
-  - **Done!**
+ - **Done!**
 
 
 
