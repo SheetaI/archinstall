@@ -54,12 +54,17 @@ EOF'
 
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
-
-cd $HOME
-mkdir -p Pictures/Screenshots
-
+# Autologin #
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
+
+# Enable services #
+sudo systemctl enable lightdm
+sudo systemctl enable firewalld
+
+# Ricing #
+cd $HOME
+mkdir -p Pictures/Screenshots
 
 sudo bash -c 'cat <<EOF > .bashrc
 # alias sourcing
@@ -80,10 +85,6 @@ echo "dotfiles" >> .gitignore
 git clone --bare https://github.com/SheetaI/dotfiles.git $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 config checkout
-
-# Enable services #
-sudo systemctl enable lightdm
-sudo systemctl enable firewalld
 
 ## End ##
 exit
