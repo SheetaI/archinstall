@@ -3,7 +3,7 @@
 
 sudo pacman -Syu
 
-# Install Essentials #
+# Install Needed Packages #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
  neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
  firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
