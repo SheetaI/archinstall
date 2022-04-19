@@ -1,6 +1,5 @@
-#!/bin/bash
+# == SETUP CONTINUATION == #
 
-# Setup continuation ... #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 hwclock --systohc											
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
