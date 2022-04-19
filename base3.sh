@@ -1,4 +1,4 @@
-# === POST-BASE INSTALL PERSONALIZATION === #
+# == POST-BASE INSTALL PERSONALIZATION == #
 # curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
 sudo pacman -Syu
