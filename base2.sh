@@ -56,6 +56,7 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
-echo "....Finished installing base system...."
 exit
+echo "....Finished installing base system...."
+
 
