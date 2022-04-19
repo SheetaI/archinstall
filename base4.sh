@@ -85,6 +85,10 @@ echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >
 echo "dotfiles" >> .gitignore
 git clone --bare https://github.com/SheetaI/dotfiles.git $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+rm .bash_aliases
+rm .bashrc
+rm -rf .config/*
+rm -rf .config
 # config checkout
 /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 # config config --local status.showUntrackedFiles no
