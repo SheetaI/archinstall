@@ -22,5 +22,5 @@ My personal automated arch linux installation script.
 
 Script | Description | Attention |
 :-- | :--: | :--: |
-**base.sh** & **base2.sh** | installs arch linux base system | will prompt you for username & password |
+**base.sh** & **base2.sh** | installs arch linux base system | will prompt for username & password at the end |
 **base3.sh** | installs my own personalizations & choice of pkgs | will prompt multiple times for confirmations |
