@@ -4,6 +4,11 @@ My personal automated arch linux installation script.
  - **Pre-requisites:**
 `Arch ISO` & `Internet Connection`
 
+| Part | Script | Description | Attention |
+:-- | :--: | :--: | :--: |
+#1 | **base.sh** & **base2.sh** | installs arch linux base system | will prompt for username & password at the end |
+#2 | **base3.sh** | installs my own personalizations & choice of pkgs | will prompt multiple times for confirmations |
+ ---
 **Part: #1**
  - **Boot the ISO & run:**
 
@@ -26,10 +31,3 @@ My personal automated arch linux installation script.
     `bash base3.sh`
     
  - **Done!**
- ---
-**Important Notes:** 
-
-| Part | Script | Description | Attention |
-:-- | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs arch linux base system | will prompt for username & password at the end |
-#2 | **base3.sh** | installs my own personalizations & choice of pkgs | will prompt multiple times for confirmations |
