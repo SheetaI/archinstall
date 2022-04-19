@@ -2,7 +2,7 @@
 My personal automated arch linux installation script.
 
  - **Pre-requisites:**
-`Arch ISO` & `Internet Connection`
+`Arch Linux ISO` & `Internet Connection`
 
 | Part | Script | Description | Attention |
 :-- | :--: | :--: | :--: |
