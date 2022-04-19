@@ -25,7 +25,8 @@ sudo make install
 
 # AUR Packages #
 cd $HOME
-yes | yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+echo -ne '\n' | yay -S polybar
+yay -S noconfirm --removemake --cleanafter ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-gitbrave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
@@ -57,17 +58,15 @@ sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/con
 # Autologin #
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
-sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
-sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
-
-# Enable services #
-sudo systemctl enable lightdm
-sudo systemctl enable firewalld
+sudo sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
+sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
 
 # Ricing #
 cd $HOME
+mkdir Music
 mkdir -p Pictures/Screenshots
 
+# Ricing #
 sudo bash -c 'cat <<EOF > .bashrc
 # alias sourcing
 if [ -f ~/.bash_aliases ]; then
@@ -81,16 +80,33 @@ POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 EOF'
 
+# Dotfiles Bare Repo #
+cd $HOME
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> .bash_aliases
-bash
 echo "dotfiles" >> .gitignore
 git clone --bare https://github.com/SheetaI/dotfiles.git $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+
+# remove duplicates before checkout
+rm .bash_aliases
+rm .bashrc
+rm -rf .config/*
+rm -rf .config
+
 # config checkout
 /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
 # config config --local status.showUntrackedFiles no
 /usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
+# Make executables #
+cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
+chmod +x ncmpcpp_cover_art.sh
+chmod +x ncmpcpp-ueberzug
+
+# Enable services #
+cd $HOME
+sudo systemctl enable lightdm
+sudo systemctl enable firewalld
+
 ## End ##
 exit
-echo "reboot and enjoy"
