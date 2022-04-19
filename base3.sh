@@ -9,7 +9,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-
  firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
  gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
  powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
- qbittorrent gimp veracrypt obsidian bash-completion
+ qbittorrent gimp veracrypt obsidian bash-completion sed
 
 # AUR Helper #
 cd $HOME
@@ -57,6 +57,8 @@ sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/con
 # Autologin #
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
+sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
+sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
 
 # Enable services #
 sudo systemctl enable lightdm
