@@ -17,7 +17,7 @@ My personal automated arch linux installation script.
     `bash base.sh`
 
  - **Done!**
-
+ ---
 **Important Notes:** 
   - Setup will prompt for username & password.
   - **base.sh** & **base2.sh** contains arch linux base system. 
