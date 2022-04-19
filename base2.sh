@@ -55,4 +55,5 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
-echo "Please reboot run bash base3.sh in your user account for post installation..."
+echo "Please reboot and run curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh"
+
