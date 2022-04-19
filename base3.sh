@@ -1,3 +1,20 @@
+ 
+
+cd $HOME
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
+# St terminal #
+cd $HOME
+git clone https://github.com/siduck/st.git
+cd st
+sudo make install
+
+# AUR Packages #
+cd $HOME
+yay -S polybar ani-cli timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
 <?xml version="1.0"?>
@@ -25,6 +42,7 @@ EOF'
 
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
+
 cd $HOME
 mkdir -p Pictures/Screenshots
 
@@ -51,10 +69,9 @@ git clone --bare https://github.com/SheetaI/dotfiles $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 config checkout
 
-
-
 # Enable services #
 sudo systemctl enable lightdm
 
 ## End ##
 exit
+echo "reboot and enjoy"
