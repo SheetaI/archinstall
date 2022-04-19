@@ -55,4 +55,4 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
-exit
+echo "Please reboot run bash base3.sh in your user account for post-installation"
