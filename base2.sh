@@ -1,5 +1,6 @@
 # == SETUP CONTINUATION == #
 
+# Timezone | Host | Hostname | Locale #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 hwclock --systohc											
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
@@ -13,6 +14,7 @@ cat <<EOF > /etc/hosts
 127.0.1.1 arch.localdomain  arch
 EOF
 
+# Additional pkgs #
 pacman -S --noconfirm networkmanager git
 
 # Systemd Bootlader Setup #
@@ -54,6 +56,6 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
-echo "....Finishing...."
-echo "Please reboot and run curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh"
+echo "....Finished installing base system...."
+exit
 
