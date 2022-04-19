@@ -1,4 +1,4 @@
-# == POST-BASE INSTALL PERSONALIZATION == #
+# == PERSONALIZATION == #
 # curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
 sudo pacman -Syu
@@ -52,7 +52,6 @@ sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
   </match>
 </fontconfig>
 EOF'
-
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
 # Autologin #
