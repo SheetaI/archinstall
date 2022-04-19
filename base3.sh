@@ -1,5 +1,17 @@
- 
+# === POST-BASE INSTALL PERSONALIZATION === #
+# curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
+sudo pacman -Syu
+
+# Install Essentials #
+sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
+ neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
+ firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
+ gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
+ powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
+ qbittorrent gimp veracrypt obsidian 
+
+# AUR Helper #
 cd $HOME
 git clone https://aur.archlinux.org/yay.git
 cd yay
@@ -71,6 +83,7 @@ config checkout
 
 # Enable services #
 sudo systemctl enable lightdm
+sudo systemctl enable firewalld
 
 ## End ##
 exit
