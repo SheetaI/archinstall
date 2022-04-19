@@ -1,6 +1,6 @@
 # == ARCH LINUX BASE SYSTEM INSTALLATION == #
 
-# Configurations #
+# Configuration: #
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 loadkeys us
 timedatectl set-ntp true
