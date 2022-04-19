@@ -26,7 +26,7 @@ sudo make install
 # AUR Packages #
 cd $HOME
 echo -ne '\n' | yay -S polybar
-yay -S noconfirm --removemake --cleanafter ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+yay -S --noconfirm --removemake --cleanafter ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
