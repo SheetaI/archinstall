@@ -25,7 +25,7 @@ sudo make install
 
 # AUR Packages #
 cd $HOME
-yay -S --noconfirm polybar ani-cli timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+yay -S polybar ani-cli timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
@@ -61,7 +61,7 @@ mkdir -p Pictures/Screenshots
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
 
-cat <<EOF > .bashrc
+sudo bash -c 'cat <<EOF > .bashrc
 # alias sourcing
 if [ -f ~/.bash_aliases ]; then
 	.  ~/.bash_aliases
@@ -72,7 +72,7 @@ powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
-EOF
+EOF'
 
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> .bash_aliases
 bash
