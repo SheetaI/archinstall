@@ -25,7 +25,7 @@ sudo make install
 
 # AUR Packages #
 cd $HOME
-yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+yes | yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
@@ -84,7 +84,10 @@ bash
 echo "dotfiles" >> .gitignore
 git clone --bare https://github.com/SheetaI/dotfiles.git $HOME/dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
-config checkout
+# config checkout
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout
+# config config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 ## End ##
 exit
