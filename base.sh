@@ -1,4 +1,4 @@
-# == MINIMAL ARCH LINUX INSTALLATION == #
+# == ARCH LINUX BASE SYSTEM INSTALLATION == #
 
 # Configurations #
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
