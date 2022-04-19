@@ -13,7 +13,7 @@ cat <<EOF > /etc/hosts
 127.0.1.1 arch.localdomain  arch
 EOF
 
-pacman -S --noconfirm networkmanager git terminus-font neofetch
+pacman -S --noconfirm networkmanager git
 
 # Systemd Bootlader Setup #
 bootctl --path=/boot install
