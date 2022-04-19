@@ -55,5 +55,6 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
+echo "....Finishing...."
 echo "Please reboot and run curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh"
 
