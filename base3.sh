@@ -2,8 +2,11 @@
 # curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
 sudo pacman -Syu
-sudo sed -i "s/^#[multilib]$/[multilib]/" /etc/pacman.conf
-sudo sed -i "s/^#Include = /etc/pacman.d/mirrorlist$/Include = /etc/pacman.d/mirrorlist/" /etc/pacman.conf
+
+sudo bash -c 'cat <<EOF > /etc/pacman.conf
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+EOF'
 
 # Install Needed Packages #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
