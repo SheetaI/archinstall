@@ -5,7 +5,7 @@ sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 loadkeys us
 timedatectl set-ntp true
 
-# | Partitions | 100MB=BOOT | 4GB=SWAP | remaining=ROOT | #
+# Partition | 100MB=BOOT | 4GB=SWAP | remaining=ROOT #
 yes | echo -e "o\ny\nn\n \n \n+100M\nef00\nn\n \n \n+4G\n8200\nn\n \n \n \n8300\nw\ny" | gdisk /dev/sda
 
 # Format: Physical Machine #
