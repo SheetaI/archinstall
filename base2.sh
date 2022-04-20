@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # == SETUP CONTINUATION == #
 
 # Timezone | Locale | Host | Hostname #
