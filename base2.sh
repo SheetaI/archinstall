@@ -59,6 +59,3 @@ passwd -l root
 
 ## End ##
 exit
-
-
-
