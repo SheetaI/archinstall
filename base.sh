@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # == ARCH LINUX BASE SYSTEM INSTALLATION == #
 
 # Configuration: #
