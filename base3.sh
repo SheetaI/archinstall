@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # == PERSONALIZATION == #
 # curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
