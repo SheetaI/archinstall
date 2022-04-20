@@ -35,6 +35,8 @@ ttf-unifont
 ttf-symbola
 otf-symbola
 libxft-bgra-git
+brave-bin
+binance
 EOF
 
 cat <<EOF > $HOME/aurpkgs.sh
