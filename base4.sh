@@ -17,7 +17,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-
 cd $HOME
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -si
+yes | makepkg -si
 
 # St terminal #
 cd $HOME
