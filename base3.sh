@@ -3,7 +3,7 @@
 
 sudo pacman -Syu
 
-# Install Needed Packages #
+# Install Needed Pkgs #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
  neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
  firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
@@ -23,10 +23,9 @@ git clone https://github.com/siduck/st.git
 cd st
 sudo make install
 
-# AUR Packages #
+# AUR Pkgs #
 cd $HOME
-echo -ne '\n \n \n \n' | yay -S polybar
-yay -S --noconfirm --removemake --cleanafter ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
