@@ -31,3 +31,9 @@ My personal automated arch linux installation script.
     `bash base3.sh`
     
  - **Done!**
+ 
+ ---
+ **Todo:**
+ - base3.sh = Automate confirmations responses
+ 
+ 
