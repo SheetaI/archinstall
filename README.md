@@ -24,8 +24,10 @@ My personal automated arch linux installation script.
 
     `bash base.sh`
     
+  - **Reboot the system**  
+    
 **Part: #2**
- - **Reboot the system**
+
  - **Login and run:**
  
     `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh`
