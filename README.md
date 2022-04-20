@@ -10,7 +10,7 @@ My personal automated arch linux installation script.
 #2 | **base3.sh** | installs my own choice of pkgs & dotfiles | will prompt for various confirmations |
 
  ---
-# installation
+# ⚙️ installation
 **Part: #1**
  - **Boot the ISO & run:**
 
