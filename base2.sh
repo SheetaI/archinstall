@@ -59,6 +59,6 @@ passwd -l root
 
 ## End ##
 exit
-echo "....Finished installing base system...."
+
 
 
