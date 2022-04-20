@@ -34,6 +34,6 @@ My personal automated arch linux installation script.
  
  ---
  **Todo:**
- - base3.sh = Automate confirmations responses
+ - Automate confirmation responses in **base3.sh**
  
  
