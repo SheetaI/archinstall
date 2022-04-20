@@ -36,14 +36,14 @@ options root=UUID=$UUID rw
 EOF
 
 # For Virtual Machine #
-#UUID="$(lsblk -dno UUID /dev/vda3)"
-#cat <<EOF > /boot/loader/entries/arch.conf
-#title    Arch Linux
-#linux    /vmlinuz-linux
-#initrd   /intel-ucode.img
-#initrd   /initramfs-linux.img
-#options root=UUID=$UUID rw
-#EOF
+# UUID="$(lsblk -dno UUID /dev/vda3)"
+# cat <<EOF > /boot/loader/entries/arch.conf
+# title    Arch Linux
+# linux    /vmlinuz-linux
+# initrd   /intel-ucode.img
+# initrd   /initramfs-linux.img
+# options root=UUID=$UUID rw
+# EOF
 
 # Startup Service #
 systemctl enable NetworkManager	
