@@ -107,4 +107,4 @@ sudo systemctl enable lightdm
 sudo systemctl enable firewalld
 
 ## End ##
-exit
+echo "Setup is done.. Please reboot the system"
