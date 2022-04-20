@@ -3,11 +3,6 @@
 
 sudo pacman -Syu
 
-sudo bash -c 'cat <<EOF > /etc/pacman.conf
-[multilib]
-Include = /etc/pacman.d/mirrorlist
-EOF'
-
 # Install Needed Packages #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
  neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
