@@ -37,6 +37,16 @@ while ! sudo yay -Syw ${aurpkgs} --noconfirm --needed; do
 done
 sudo yay -Su ${aurpkgs} --noconfirm --needed
 
+echo "-------------------------------------------------"
+echo "     Installing St Terminal"
+echo "-------------------------------------------------"
+cd ${HOME}
+git clone "https://github.com/siduck/st.git"
+cd ${HOME}/st
+sudo make install --noconfirm --needed
+clear
+
+
 # Enable services #
 cd $HOME
 sudo systemctl enable lightdm
