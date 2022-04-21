@@ -19,7 +19,7 @@ My personal automated arch linux installation script.
     `pacman -S git`
 
     `git clone https://github.com/SheetaI/archinstall && cd archinstall`
-
+    
     `bash base.sh`
     
   - **Reboot the system**  
@@ -28,10 +28,12 @@ My personal automated arch linux installation script.
 
  - **Login and run:**
  
-   `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/sheetal.sh && bash sheetal.sh`
+   `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/sheetal.sh`
+   
+   `bash sheetal.sh`
     
  - **Done!**
  
  ---
  **Todo:**
-- Fully unattended installation Part#2
+- Unattended installation for Part#2
