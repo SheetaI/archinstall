@@ -27,9 +27,10 @@ sudo make install
 
 # AUR Pkgs #
 cd $HOME/archinstall
-chmod +x $HOME/aurpkgs.sh
-chmod +x $HOME/script.exp
-./script.exp
+chmod +x aurpkgs.sh
+chmod +x script.exp
+chmod +x expect_script.exp
+bash expect_script.sh
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
