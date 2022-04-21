@@ -12,9 +12,9 @@ sudo pacman -Syyu
 
 # Pkgs installation #
 
-    pkgs=(
+pkgs=(
 
-        # --- XORG Display Rendering
+        # --- Graphical Display -- #
             'xorg'                
             'xorg-xinit'           
 
