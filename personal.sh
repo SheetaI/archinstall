@@ -16,7 +16,7 @@ pkgs="$("xorg" "xorg-xinit" "lightdm" "lightdm-gtk-greeter" "lightdm-gtk-greeter
 "powerline" "powerline-fonts" "youtube-dl" "galculator" "ueberzug" "sxiv" "gnome-disk-utility" "qbittorrent" "gimp" "veracrypt" "obsidian" "bash-completion")"
 
 # Install Needed Pkgs #
-while ! pacman -Syw ${pkgs}; do
+while ! pacman -Syw $pkgs; do
   sleep 10
 done
 pacman -Su ${pkgs}
