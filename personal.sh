@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# == PERSONALIZATION PART 1 == #
+
+# == Contents: my choice of pkgs == #
+
+# Configurations #
+sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
+sudo bash -c "echo -e '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist' >>/etc/pacman.conf"
+sudo pacman -Syu
+
+# Install Needed Pkgs #
+sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
+ neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
+ firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
+ gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
+ powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
+ qbittorrent gimp veracrypt obsidian bash-completion
+
+# St terminal #
+cd $HOME
+git clone https://github.com/siduck/st.git && cd st
+sudo make install
+
+cd $HOME/archinstall
+chmod +x personal2.sh
+./personal2.sh
+
+# continuation on personal2.sh #
+
