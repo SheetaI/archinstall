@@ -29,3 +29,5 @@ echo && yay -S --noconfirm --removemake --cleanafter polybar ani-cli-git timeshi
 cd $HOME/archinstall
 chmod +x base4.sh
 ./base4.sh
+
+# continuation on base4.sh #
