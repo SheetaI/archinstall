@@ -72,20 +72,6 @@ cd $HOME
 mkdir Music
 mkdir -p Pictures/Screenshots
 
-# Ricing #
-sudo bash -c 'cat <<EOF > .bashrc
-# alias sourcing
-if [ -f ~/.bash_aliases ]; then
-	.  ~/.bash_aliases
-fi
-
-neofetch
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
-EOF'
-
 # Dotfiles Bare Repo #
 cd $HOME
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> .bash_aliases
@@ -109,6 +95,5 @@ cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
 chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
 
-
-## End ##
+# End #
 echo "Setup is done.. Please reboot the system"
