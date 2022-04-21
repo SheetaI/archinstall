@@ -6,7 +6,7 @@ My personal automated arch linux installation script.
 
 | Part | Script | Description | Attention |
 :-- | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs the base system | will prompt for username & password at the end |
+#1 | **base.sh** & **base2.sh** | installs the base system | prompts creation of username & password at the end |
 #2 | **base3.sh** | installs my own choice of pkgs & dotfiles | will prompt for various confirmations |
 
  ---
