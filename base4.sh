@@ -1,6 +1,8 @@
 #!/bin/bash
 
-# == PERSONALIZATION == #
+# == PERSONALIZATION PART 2 == #
+
+# == Contents: my choice of pkgs & dotfiles == #
 
 # Install Needed Pkgs #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
