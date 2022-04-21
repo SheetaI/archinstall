@@ -4,11 +4,11 @@ My personal automated arch linux installation script.
  - **Pre-requisites:**
 `Arch Linux ISO` & `Internet Connection`
 
-| Part | Script | Description | Attention |
-:-- | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs the base system | prompts user & password creation at the end |
-#2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | prompts for AUR pkgs confirmations | |
-#3 | **dev-sheetal.sh** | ongoing project | unstable may not work | |
+| Part | Script | Description | Attention | Status | 
+:-- | :--: | :--: | :--: | :--: |
+#1 | **base.sh** & **base2.sh** | installs the base system | prompts user & password creation at the end | Working |
+#2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | prompts for AUR pkgs confirmations | Working |
+#3 | **dev-sheetal.sh** | ongoing project | make pacman loop & auto respond AUR prompts | Not working|
  ---
 # ⚙️ installation
 **Part: #1**
