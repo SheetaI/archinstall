@@ -18,8 +18,7 @@ yes | makepkg -si
 
 # St terminal #
 cd $HOME
-git clone https://github.com/siduck/st.git
-cd st
+git clone https://github.com/siduck/st.git && cd st
 sudo make install
 
 # AUR Pkgs #
