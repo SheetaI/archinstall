@@ -42,7 +42,7 @@ echo "-------------------------------------------------"
 cd ${HOME}
 git clone "https://github.com/siduck/st.git"
 cd ${HOME}/st
-sudo make install --noconfirm --needed
+sudo make install
 clear
 
 echo "-------------------------------------------------"
