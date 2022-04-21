@@ -1,6 +1,7 @@
 #!/bin/bash
 
-# == SETUP CONTINUATION == #
+# == ARCH LINUX BASE SYSTEM INSTALLATION == #
+# == PART 2 == #
 
 # Timezone | Locale | Host | Hostname #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
