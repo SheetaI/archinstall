@@ -3,6 +3,7 @@
 # == PERSONALIZATION == #
 # curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
 
+sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 sudo pacman -Syu
 
 # Install Needed Pkgs #
