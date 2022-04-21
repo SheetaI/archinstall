@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #-------------------------------------------------------------------------
-#  Arch Linux Post Install: Part #1 Pkgs
+#  Arch Linux Post Install: Part #1 Pacman Pkgs
 #-------------------------------------------------------------------------
 
 # Configurations #
@@ -76,11 +76,6 @@ function baseSetup {
         clear
     done
 }
-
-# St terminal #
-cd $HOME
-git clone https://github.com/siduck/st.git && cd st
-sudo make install
 
 cd $HOME/archinstall
 chmod +x personal2.sh
