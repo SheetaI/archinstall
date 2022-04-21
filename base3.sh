@@ -56,6 +56,11 @@ sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
 EOF'
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
+# Enable services #
+cd $HOME
+sudo systemctl enable lightdm
+sudo systemctl enable firewalld
+
 # Autologin #
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
@@ -104,10 +109,6 @@ cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
 chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
 
-# Enable services #
-cd $HOME
-sudo systemctl enable lightdm
-sudo systemctl enable firewalld
 
 ## End ##
 echo "Setup is done.. Please reboot the system"
