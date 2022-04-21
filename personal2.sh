@@ -81,3 +81,4 @@ chmod +x ncmpcpp-ueberzug
 echo "-------------------------------------------------------------------"
 echo "Finished Installing Everything...Reboot & Enjoy !!!"
 echo "-------------------------------------------------------------------"
+exit
