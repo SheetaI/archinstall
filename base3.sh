@@ -16,9 +16,8 @@ sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-
 
 # AUR Helper #
 cd $HOME
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://aur.archlinux.org/yay.git && cd yay
+yes | makepkg -si
 
 # St terminal #
 cd $HOME
@@ -28,7 +27,7 @@ sudo make install
 
 # AUR Pkgs #
 cd $HOME
-yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
+echo && yay -S --noconfirm --removemake --cleanafter polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
