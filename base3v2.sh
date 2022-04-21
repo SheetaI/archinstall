@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# == PERSONALIZATION == #
-# curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
+# == PERSONALIZATION PART 1 == #
+
+# == Contents: All about AUR == #
 
 sudo pacman -Syu
 sudo pacman -S --noconfirm sed
