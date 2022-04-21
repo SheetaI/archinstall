@@ -14,7 +14,6 @@ fi
 
 pkgs=""
 
-
 # Loop through the text file line by line
 while IFS= read -r pkg; do
     # Append the package name to pkgs
