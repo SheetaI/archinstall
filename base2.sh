@@ -61,4 +61,5 @@ echo -e "$pass\n$pass" | passwd $user
 passwd -l root
 
 ## End ##
+echo "Base Installation Completed...Reboot Now"
 exit
