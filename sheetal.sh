@@ -15,67 +15,12 @@ sudo pacman -Syyu
 echo "-------------------------------------------------"
 echo "     Installing Pacman Pkgs"
 echo "-------------------------------------------------"
-
-pkgs=(
-
-# --- Graphical Display -- #
-       'xorg'                
-       'xorg-xinit'           
-
-# --- Login Display Manager #
-      'lightdm'                 
-      'lightdm-gtk-greeter'
-	    'lightdm-gtk-greeter-settings'
-
-# --- Desktop Environment -- #
-	    'bspwm'
-	    'sxhkd'
-	    'feh'
-	    'sxiv'
-	    'ueberzug'
-	    'maim'
-      'rofi'                  
-      'picom'      
-      'dunst '          
-      'lxsession'
-      'lxappearance'          
-	    'thunar'
-	    'ranger'
-	    'galculator'
-	    'gnome-disk-utility'
-	    'udisks2'
-	    'udiskie'
-	    'thunar-archive-plugin'
-	    'file-roller'
-	    'gedit'
-	    'htop'
-	    'neofetch'
-	    'bash-completion'
-	    'powerline'
-	    'powerline-fonts'
-	    'libreoffice'
-	    'bleachbit'
-	    'veracrypt'
-	    'obsidian'
-	    'firefox'
-      
-# --- Media -- #	  
-	    'mpd'
-	    'mpc'
-	    'ncmpcpp'
-	    'qbittorrent'
-	    'gimp'
-	    'pulseaudio'
-	    'pulseaudio-alsa'
-	    'alsa'
-	    'alsa-utils'
-	    'youtube-dl'	    
-)
-
-while ! sudo pacman -S ${pkgs} --noconfirm --needed; do
-  sleep 10
-done
-sudo pacman -Su ${pkgs} --noconfirm --needed
+sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
+ 	neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
+ 	firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
+ 	gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
+ 	powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
+	bash-completion sed go
 
 echo "-------------------------------------------------"
 echo "     Installing AUR Helper"
@@ -85,28 +30,11 @@ git clone "https://aur.archlinux.org/yay.git"
 cd ${HOME}/yay
 makepkg -si --noconfirm --needed
 clear
-    
-aurpkgs=(    
-	'polybar'
-	'ani-cli-git'
-	'timeshift'
-	'cava'
-	'ttf-unifont'
-	'ttf-symbola'
-	'otf-symbola'
-	'libxft-bgra-git'
-	'brave-bin'
-	'binance'    
-)
-    
+        
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
-while ! yay -S ${aurpkgs} --noconfirm --needed; do
-  sleep 10
-done
-yay -Su ${aurpkgs} --noconfirm --needed
-clear
+yay -S polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git
 
 echo "-------------------------------------------------"
 echo "     Installing St Terminal"
