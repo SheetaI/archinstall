@@ -7,7 +7,7 @@ My personal automated arch linux installation script.
 | Part | Script | Description | Attention |
 :-- | :--: | :--: | :--: |
 #1 | **base.sh** & **base2.sh** | installs the base system | prompts user & password creation at the end |
-#2 | **base3.sh** | installs my own choice of pkgs & dotfiles | prompts multiple times for confirmations | |
+#2 | **base3.sh** | installs my choice of pkgs & dotfiles | prompts multiple times for confirmations | |
 
  ---
 # ⚙️ installation
@@ -34,6 +34,4 @@ My personal automated arch linux installation script.
  
  ---
  **Todo:**
- - Automate confirmation responses in **base3.sh**
- - Test **base4.sh** as candidate replacement for **base3.sh**
- 
+- Fully unattended installation Part#2
