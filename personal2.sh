@@ -40,7 +40,15 @@ sudo pacman -Syu
     done
 }
 
-
+    echo "-------------------------------------------------"
+    echo "     Installing yay"
+    echo "-------------------------------------------------"
+    cd ${HOME}
+    git clone "https://github.com/siduck/st.git"
+    cd ${HOME}/st
+    sudo make install --noconfirm --needed
+    clear
+    
 # Enable services #
 cd $HOME
 sudo systemctl enable lightdm
