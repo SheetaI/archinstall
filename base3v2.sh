@@ -6,7 +6,7 @@
 sudo pacman -Syu
 sudo pacman -S --noconfirm sed
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
-#sudo sed -i "s/^#[multilib]$/[multilib]/" /etc/pacman.conf
+sudo bash -c "echo -e '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist' >>/etc/pacman.conf"
 
 sudo pacman -S --noconfirm go
 
