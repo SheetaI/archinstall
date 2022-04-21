@@ -4,7 +4,6 @@
 #  Arch Linux Post Install: Part #2 AUR & Dotfiles
 #-------------------------------------------------------------------------
 
-sudo pacman -Syu
 echo "-------------------------------------------------"
 echo "     Installing AUR Helper"
 echo "-------------------------------------------------"
@@ -46,17 +45,13 @@ cd ${HOME}/st
 sudo make install --noconfirm --needed
 clear
 
-
-# Enable services #
+echo "-------------------------------------------------"
+echo "     Enabling Startup Services"
+echo "-------------------------------------------------"
 cd $HOME
 sudo systemctl enable lightdm
 sudo systemctl enable firewalld
 
-# Autologin #
-sudo groupadd -r autologin
-sudo gpasswd -a sheetal autologin
-sudo sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
-sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
 
 # Ricing #
 cd $HOME
@@ -111,6 +106,14 @@ rm -rf .config
 cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
 chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
+
+echo "-------------------------------------------------"
+echo "     Enabling User Autologin"
+echo "-------------------------------------------------"
+sudo groupadd -r autologin
+sudo gpasswd -a sheetal autologin
+sudo sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
+sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
 
 # End #
 echo "-------------------------------------------------------------------"
