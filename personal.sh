@@ -12,7 +12,7 @@ sudo pacman -Syyu
 
 # Pkgs installation #
 
-    PKGS=(
+    pkgs=(
 
         # --- XORG Display Rendering
             'xorg'                
@@ -68,7 +68,7 @@ sudo pacman -Syyu
 	    'youtube-dl'	    
     )
 
-while ! pacman -Syw ${pkgs}; do
+while ! pacman -Syw ${pkgs} --noconfirm --needed; do
   sleep 10
 done
 pacman -Su ${pkgs}
