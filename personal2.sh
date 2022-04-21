@@ -38,6 +38,11 @@ sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
 EOF'
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
+# St terminal #
+cd $HOME
+git clone https://github.com/siduck/st.git && cd st
+sudo make install
+
 # Enable services #
 cd $HOME
 sudo systemctl enable lightdm
