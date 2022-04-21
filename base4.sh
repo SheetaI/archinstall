@@ -1,9 +1,6 @@
 #!/bin/bash
 
 # == PERSONALIZATION == #
-# curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh
-
-sudo pacman -Syu
 
 # Install Needed Pkgs #
 sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
@@ -11,26 +8,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-
  firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
  gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
  powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
- qbittorrent gimp veracrypt obsidian bash-completion sed go expect
-
-# AUR Helper #
-cd $HOME
-git clone https://aur.archlinux.org/yay.git
-cd yay
-yes | makepkg -si
-
-# St terminal #
-cd $HOME
-git clone https://github.com/siduck/st.git
-cd st
-sudo make install
-
-# AUR Pkgs #
-cd $HOME/archinstall
-chmod +x aurpkgs.sh
-chmod +x script.exp
-chmod +x expect_script.exp
-bash expect_script.sh
+ qbittorrent gimp veracrypt obsidian bash-completion sed go
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
@@ -58,6 +36,11 @@ sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
 EOF'
 sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/conf.d/
 
+# Enable services #
+cd $HOME
+sudo systemctl enable lightdm
+sudo systemctl enable firewalld
+
 # Autologin #
 sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
@@ -68,20 +51,6 @@ sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/light
 cd $HOME
 mkdir Music
 mkdir -p Pictures/Screenshots
-
-# Ricing #
-sudo bash -c 'cat <<EOF > .bashrc
-# alias sourcing
-if [ -f ~/.bash_aliases ]; then
-	.  ~/.bash_aliases
-fi
-
-neofetch
-powerline-daemon -q
-POWERLINE_BASH_CONTINUATION=1
-POWERLINE_BASH_SELECT=1
-. /usr/share/powerline/bindings/bash/powerline.sh
-EOF'
 
 # Dotfiles Bare Repo #
 cd $HOME
@@ -106,11 +75,5 @@ cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
 chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
 
-# Enable services #
-cd $HOME
-sudo systemctl enable lightdm
-sudo systemctl enable firewalld
-
-## End ##
+# End #
 echo "Setup is done.. Please reboot the system"
-
