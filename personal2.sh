@@ -32,7 +32,7 @@ aurpkgs=(
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
-while ! yay -Syw ${aurpkgs} --noconfirm --needed; do
+while ! yay -S ${aurpkgs} --noconfirm --needed; do
   sleep 10
 done
 yay -Su ${aurpkgs} --noconfirm --needed
