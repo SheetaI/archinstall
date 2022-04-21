@@ -68,10 +68,10 @@ pkgs=(
 	    'youtube-dl'	    
     )
 
-while ! pacman -Syw ${pkgs} --noconfirm --needed; do
+while ! sudo pacman -Syw ${pkgs} --noconfirm --needed; do
   sleep 10
 done
-pacman -Su ${pkgs} --noconfirm --needed
+sudo pacman -Su ${pkgs} --noconfirm --needed
 
 cd $HOME/archinstall
 chmod +x personal2.sh
