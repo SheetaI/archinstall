@@ -1,3 +1,0 @@
-!#/bin/expect
-
-./script.exp
