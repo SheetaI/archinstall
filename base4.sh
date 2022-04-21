@@ -76,4 +76,4 @@ chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
 
 # End #
-echo "Setup is done.. Please reboot the system"
+echo "Setup is complete... Please reboot the system"
