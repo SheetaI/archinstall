@@ -8,7 +8,7 @@ My personal automated arch linux installation script.
 :-- | :--: | :--: | :--: |
 #1 | **base.sh** & **base2.sh** | installs the base system | prompts user & password creation at the end |
 #2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | prompts for AUR pkgs confirmations | |
-
+#2 | **dev-sheetal.sh** | ongoing | unstable may not work | |
  ---
 # ⚙️ installation
 **Part: #1**
