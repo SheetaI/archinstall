@@ -45,13 +45,6 @@ cd ${HOME}/st
 sudo make install
 clear
 
-echo "-------------------------------------------------"
-echo "     Enabling Startup Services"
-echo "-------------------------------------------------"
-cd $HOME
-sudo systemctl enable lightdm
-sudo systemctl enable firewalld
-
 
 echo "-------------------------------------------------"
 echo "     Setting up Dotfiles"
@@ -80,6 +73,13 @@ echo "-------------------------------------------------"
 cd $HOME/.ncmpcpp/ncmpcpp-ueberzug
 chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
+
+echo "-------------------------------------------------"
+echo "     Enabling Startup Services"
+echo "-------------------------------------------------"
+cd $HOME
+sudo systemctl enable lightdm
+sudo systemctl enable firewalld
 
 echo "-------------------------------------------------"
 echo "     Enabling User Autologin"
