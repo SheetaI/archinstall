@@ -18,7 +18,7 @@ cat <<EOF > /etc/hosts
 EOF
 
 # Additional pkgs #
-pacman -S --noconfirm networkmanager git
+pacman -S --noconfirm networkmanager git go
 
 # Systemd Bootlader Setup #
 bootctl --path=/boot install
