@@ -20,7 +20,7 @@ sudo pacman -S --noconfirm xorg xorg-xinit  lightdm lightdm-gtk-greeter lightdm-
  	firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
  	gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
  	powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
-	bash-completion sed go
+	bash-completion
 
 echo "-------------------------------------------------"
 echo "     Installing AUR Helper"
