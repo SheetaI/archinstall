@@ -11,7 +11,7 @@ sudo bash -c "echo -e '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist' >>/etc/
 sudo pacman -Syyu
 
 # Pkgs installation #
-function baseSetup {
+
     PKGS=(
 
         # --- XORG Display Rendering
@@ -68,14 +68,10 @@ function baseSetup {
 	    'youtube-dl'	    
     )
 
-    for PKG in "${PKGS[@]}"; do
-        echo "-------------------------------------------------"
-        echo "     Installing package "$PKG
-        echo "-------------------------------------------------"
-        sudo pacman -S "$PKG" --noconfirm --needed
-        clear
-    done
-}
+while ! pacman -Syw ${pkgs}; do
+  sleep 10
+done
+pacman -Su ${pkgs}
 
 cd $HOME/archinstall
 chmod +x personal2.sh
