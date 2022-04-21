@@ -28,7 +28,7 @@ My personal automated arch linux installation script.
 
  - **Login and run:**
  
-    `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/sheetal.sh && bash sheetal.sh
+   `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/sheetal.sh && bash sheetal.sh`
     
  - **Done!**
  
