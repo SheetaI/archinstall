@@ -26,20 +26,7 @@ cd st
 sudo make install
 
 # AUR Pkgs #
-cat <<EOF > $HOME/pkgs.txt
-polybar
-ani-cli-git
-timeshift
-cava
-ttf-unifont
-ttf-symbola
-otf-symbola
-libxft-bgra-git
-brave-bin
-binance
-EOF
-
-cd $HOME
+cd $HOME/archinstall
 chmod +x $HOME/aurpkgs.sh
 chmod +x $HOME/script.exp
 ./script.exp
