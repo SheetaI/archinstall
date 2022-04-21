@@ -49,7 +49,7 @@ sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/light
 
 # Ricing #
 cd $HOME
-mkdir Music
+mkdir -p {Music,Videos}
 mkdir -p Pictures/Screenshots
 
 # Dotfiles Bare Repo #
