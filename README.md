@@ -7,7 +7,7 @@ My personal automated arch linux installation script.
 | Part | Script | Description | Attention |
 :-- | :--: | :--: | :--: |
 #1 | **base.sh** & **base2.sh** | installs the base system | prompts creation of username & password at the end |
-#2 | **base3.sh** | installs my own choice of pkgs & dotfiles | will prompt for various confirmations |
+#2 | **personal.sh & personal2.sh** | installs my own choice of pkgs & dotfiles | completely unattended |
 
  ---
 # ⚙️ installation
@@ -18,9 +18,7 @@ My personal automated arch linux installation script.
 
     `pacman -S git`
 
-    `git clone https://github.com/SheetaI/archinstall`
-
-    `cd archinstall`
+    `git clone https://github.com/SheetaI/archinstall && cd archinstall`
 
     `bash base.sh`
     
@@ -30,9 +28,9 @@ My personal automated arch linux installation script.
 
  - **Login and run:**
  
-    `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/base3.sh`
+    `git clone https://github.com/SheetaI/archinstall && cd archinstall`
     
-    `bash base3.sh`
+    `bash personal.sh`
     
  - **Done!**
  
