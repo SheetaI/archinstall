@@ -5,9 +5,17 @@
 #-------------------------------------------------------------------------
 
 sudo pacman -Syu
-
+echo "-------------------------------------------------"
+echo "     Installing AUR Helper"
+echo "-------------------------------------------------"
+cd ${HOME}
+git clone "https://aur.archlinux.org/yay.git"
+cd ${HOME}/yay
+makepkg -si --noconfirm --needed
+clear
+    
 # AUR Pkgs #
-    AURPKGS=(
+aurpkgs=(
     
 	'polybar'
 	'ani-cli-git'
@@ -18,37 +26,17 @@ sudo pacman -Syu
 	'otf-symbola'
 	'libxft-bgra-git'
 	'brave-bin'
-	'binance'
-    
+	'binance'    
     )
     
-    echo "-------------------------------------------------"
-    echo "     Installing yay"
-    echo "-------------------------------------------------"
-    cd ${HOME}
-    git clone "https://aur.archlinux.org/yay.git"
-    cd ${HOME}/yay
-    makepkg -si --noconfirm --needed
-    clear
+echo "-------------------------------------------------"
+echo "     Installing AUR Pkgs"
+echo "-------------------------------------------------"
+while ! sudo yay -Syw ${aurpkgs} --noconfirm --needed; do
+  sleep 10
+done
+sudo yay -Su ${aurpkgs} --noconfirm --needed
 
-    for AUR in "${AURPKGS[@]}"; do
-        echo "-------------------------------------------------"
-        echo "     Installing package "$AUR
-        echo "-------------------------------------------------"
-        sudo pacman -S "$AUR" --noconfirm --needed
-        clear
-    done
-}
-
-    echo "-------------------------------------------------"
-    echo "     Installing yay"
-    echo "-------------------------------------------------"
-    cd ${HOME}
-    git clone "https://github.com/siduck/st.git"
-    cd ${HOME}/st
-    sudo make install --noconfirm --needed
-    clear
-    
 # Enable services #
 cd $HOME
 sudo systemctl enable lightdm
