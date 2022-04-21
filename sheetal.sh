@@ -72,7 +72,7 @@ pkgs=(
 	    'youtube-dl'	    
 )
 
-while ! sudo pacman -Syw ${pkgs} --noconfirm --needed; do
+while ! sudo pacman -S ${pkgs} --noconfirm --needed; do
   sleep 10
 done
 sudo pacman -Su ${pkgs} --noconfirm --needed
