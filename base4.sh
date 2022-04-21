@@ -39,8 +39,10 @@ brave-bin
 binance
 EOF
 
+cd $HOME
 chmod +x $HOME/aurpkgs.sh
-echo | ./aurpkgs.sh pkgs.txt
+chmod +x $HOME/script.exp
+./script.exp
 
 # Font Rendering #
 sudo bash -c 'cat <<EOF > /etc/fonts/local.conf
