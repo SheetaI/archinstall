@@ -1,2 +1,10 @@
-cava
+polybar
 ani-cli-git
+timeshift
+cava
+ttf-unifont
+ttf-symbola
+otf-symbola
+libxft-bgra-git
+brave-bin
+binance
