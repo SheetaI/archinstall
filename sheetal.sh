@@ -38,7 +38,7 @@ clear
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
-yay -S --removemake --cleanafter polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git
+yay -S --removemake --cleanafter polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
 sleep 5	
 clear
 
