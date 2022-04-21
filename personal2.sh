@@ -32,10 +32,10 @@ aurpkgs=(
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
-while ! sudo yay -Syw ${aurpkgs} --noconfirm --needed; do
+while ! yay -Syw ${aurpkgs} --noconfirm --needed; do
   sleep 10
 done
-sudo yay -Su ${aurpkgs} --noconfirm --needed
+yay -Su ${aurpkgs} --noconfirm --needed
 
 echo "-------------------------------------------------"
 echo "     Installing St Terminal"
