@@ -78,4 +78,6 @@ chmod +x ncmpcpp_cover_art.sh
 chmod +x ncmpcpp-ueberzug
 
 # End #
-echo "Setup is complete... Please reboot the system"
+echo "-------------------------------------------------------------------"
+echo "Finished Installing Everything...Reboot & Enjoy !!!"
+echo "-------------------------------------------------------------------"
