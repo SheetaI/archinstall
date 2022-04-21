@@ -27,7 +27,7 @@ cd $HOME
 echo && yay -S --noconfirm --removemake --cleanafter polybar ani-cli-git timeshift cava ttf-unifont ttf-symbola otf-symbola libxft-bgra-git brave-bin binance
 
 cd $HOME/archinstall
-chmod +x base4.sh
-./base4.sh
+chmod +x personal2.sh
+./personal2.sh
 
-# continuation on base4.sh #
+# continuation on personal2.sh #
