@@ -10,18 +10,18 @@ echo "-------------------------------------------------"
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 sudo reflector --verbose --country Singapore,Taiwan,Indonesia,Thailand --latest 20 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 sudo bash -c "echo -e '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist' >>/etc/pacman.conf"
-sudo pacman --noconfirm -Sy archlinux-keyring
+pacman -Sy --noconfirm archlinux-keyring
 sudo pacman -Syyu
 
 echo "-------------------------------------------------"
 echo "     Installing Pacman Pkgs"
 echo "-------------------------------------------------"
-sudo pacman -S --noconfirm xorg xorg-xinit lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings \
- 	neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom \
- 	firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst \
- 	gedit htop libreoffice bleachbit maim pulseaudio pulseaudio-alsa alsa alsa-utils \
- 	powerline powerline-fonts youtube-dl galculator ueberzug sxiv gnome-disk-utility \
-	qbittorrent veracrypt obsidian bash-completion
+pkg_list="xorg xorg-xinit lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst gedit htop maim pulseaudio pulseaudio-alsa alsa alsa-utils powerline powerline-fonts youtube-dl ueberzug sxiv"
+
+while ! sudo pacman -Syuw --noconfirm ${pkg_list}; do
+  sleep 10
+done
+sudo pacman -Su --noconfirm ${pkg_list}
 sleep 5
 clear
 
