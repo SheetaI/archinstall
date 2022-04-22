@@ -38,9 +38,7 @@ cd ${HOME}/yay
 #echo "-------------------------------------------------"
 #echo "     Installing AUR Pkgs"
 #echo "-------------------------------------------------"
-#yay -S polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
-#sleep 5	
-#clear
+(echo "1"; echo "1"; echo "1"; echo "1"; echo "y"; echo "\n"; echo "Y"; echo "Y"; yes "Y") | yay -Sy polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
 
 #echo "-------------------------------------------------"
 #echo "     Installing St Terminal"
