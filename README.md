@@ -14,7 +14,7 @@ My personal automated arch linux installation script.
 **Part #1:** 
  - **Boot the ISO & run:**
 
-    `pacman -Syy && pacman -S git`
+    `pacman -Syy && yes | pacman -S git`
 
     `git clone https://github.com/SheetaI/archinstall && cd archinstall`
     
