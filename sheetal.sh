@@ -40,7 +40,7 @@ echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
 sleep 3
-aurpkgs="polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance"
+aurpkgs="polybar timeshift debtap cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance"
 
 while ! (echo "1"; echo "1"; echo "1"; echo "1"; echo "y"; echo "\n"; echo "Y"; echo "Y"; yes "Y") | yay -Sy ${aurpkgs}; do
   sleep 10
