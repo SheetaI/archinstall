@@ -20,7 +20,14 @@ EOF
 echo "-------------------------------------------------"
 echo "     Installating Addition Pkgs"
 echo "-------------------------------------------------"
-pacman -S --noconfirm networkmanager git go reflector bash-completion
+addpkgs="networkmanager git go reflector bash-completion"
+
+while ! pacman -Syuw --noconfirm ${addpkgs}; do
+  sleep 10
+done
+pacman -Su --noconfirm ${addpkgs}
+sleep 3
+clear
 
 echo "-------------------------------------------------"
 echo "     Setting systemd Bootloader"
