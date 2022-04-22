@@ -23,7 +23,7 @@ yes | echo -e "o\ny\nn\n \n \n+100M\nef00\nn\n \n \n+4G\n8200\nn\n \n \n \n8300\
 clear 
 
 echo "-------------------------------------------------"
-echo "     Formatting Physical Drive"
+echo "     Formatting Drive"
 echo "-------------------------------------------------"
 echo " FAT32=BOOT | LINUX SWAP=SWAP | LINUX FILESYSTEM=ROOT"
 echo "-------------------------------------------------"
@@ -34,7 +34,7 @@ swapon /dev/sda2
 mkfs.ext4 /dev/sda3
 
 echo "-------------------------------------------------"
-echo "     Mounting Physical Drive"
+echo "     Mounting Drive"
 echo "-------------------------------------------------"
 echo " /mnt/boot=BOOT | /=ROOT"
 echo "-------------------------------------------------"
