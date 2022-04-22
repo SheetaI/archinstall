@@ -22,7 +22,8 @@ while ! sudo pacman -Syuw --noconfirm ${pkg_list}; do
   sleep 10
 done
 sudo pacman -Su --noconfirm ${pkg_list}
-
+sleep 5
+clear
 
 #echo "-------------------------------------------------"
 #echo "     Installing AUR Helper"
