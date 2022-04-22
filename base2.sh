@@ -74,3 +74,4 @@ echo "-------------------------------------------------------------------"
 echo "Finished Installing Base System...Reboot Now"
 echo "-------------------------------------------------------------------"
 exit
+cp sheetal.sh /mnt/home/sheetal
