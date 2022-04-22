@@ -3,6 +3,7 @@
 echo "-------------------------------------------------"
 echo "     Configuring: Timezone | Locale | Host | Hostname"
 echo "-------------------------------------------------"
+sleep 3
 # Timezone | Locale | Host | Hostname #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 hwclock --systohc											
@@ -20,18 +21,19 @@ EOF
 echo "-------------------------------------------------"
 echo "     Installating Addition Pkgs"
 echo "-------------------------------------------------"
+sleep 3
 addpkgs="networkmanager git go reflector bash-completion"
 
 while ! pacman -Syuw --noconfirm ${addpkgs}; do
   sleep 10
 done
 pacman -Su --noconfirm ${addpkgs}
-sleep 3
 clear
 
 echo "-------------------------------------------------"
 echo "     Setting systemd Bootloader"
 echo "-------------------------------------------------"
+sleep 3
 bootctl --path=/boot install
 
 cat <<EOF > /boot/loader/loader.conf
@@ -39,7 +41,6 @@ timeout 0
 default arch-*
 EOF
 
-# For Physical Machine #
 UUID="$(lsblk -dno UUID /dev/sda3)"
 cat <<EOF > /boot/loader/entries/arch.conf
 title    Arch Linux
@@ -48,16 +49,6 @@ initrd   /intel-ucode.img
 initrd   /initramfs-linux.img
 options root=UUID=$UUID rw
 EOF
-
-# For Virtual Machine #
-#UUID="$(lsblk -dno UUID /dev/vda3)"
-#cat <<EOF > /boot/loader/entries/arch.conf
-#title    Arch Linux
-#linux    /vmlinuz-linux
-#initrd   /intel-ucode.img
-#initrd   /initramfs-linux.img
-#options root=UUID=$UUID rw
-#EOF
 
 echo "-------------------------------------------------"
 echo "     Enabling Internet Connection"
@@ -75,7 +66,8 @@ sed -i '/%wheel/s/^#//' /etc/sudoers
 read -p "Enter password: " pass
 echo -e "$pass\n$pass" | passwd $user
 passwd -l root
-cp 
+sleep 3
+
 ## End ##
 echo "-------------------------------------------------------------------"
 echo "Finished Installing Base System...Reboot Now"
