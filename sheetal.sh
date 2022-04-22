@@ -38,9 +38,19 @@ clear
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
-yay -S polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
-sleep 5	
+aurpkgs="polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance"
+
+while ! (echo "1"; echo "1"; echo "1"; echo "1"; echo "\n"; echo "Y"; echo "Y"; yes "Y") | yay -Sy ${aurpkgs}; do
+  sleep 10
+done
+yay -Su --cleanafter ${aurpkgs}
+sleep 5
 clear
+
+#OLD WORKING BUT NEEDS CONFIRMATIONS"
+#yay -S polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
+#sleep 5	
+#clear
 
 echo "-------------------------------------------------"
 echo "     Installing St Terminal"
