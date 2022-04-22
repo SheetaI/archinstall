@@ -7,6 +7,7 @@ echo "-------------------------------------------------"
 echo "-------------------------------------------------"
 echo "     Prepairing"
 echo "-------------------------------------------------"
+sleep 3
 sudo sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 sudo reflector --verbose --country Singapore,Taiwan,Indonesia,Thailand --latest 20 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 sudo bash -c "echo -e '\n[multilib]\nInclude = /etc/pacman.d/mirrorlist' >>/etc/pacman.conf"
@@ -16,56 +17,51 @@ sudo pacman -Syyu
 echo "-------------------------------------------------"
 echo "     Installing Pacman Pkgs"
 echo "-------------------------------------------------"
+sleep 3
 pkg_list="xorg xorg-xinit lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst gedit libreoffice galculator htop maim pulseaudio pulseaudio-alsa alsa alsa-utils powerline powerline-fonts youtube-dl ueberzug sxiv qbittorrent gimp veracrypt obsidian bleachbit gnome-disk-utility"
 
 while ! sudo pacman -Syuw --noconfirm ${pkg_list}; do
   sleep 10
 done
 sudo pacman -Su --noconfirm ${pkg_list}
-sleep 5
 clear
 
 echo "-------------------------------------------------"
 echo "     Installing AUR Helper"
 echo "-------------------------------------------------"
+sleep 3
 cd ${HOME}
 git clone "https://aur.archlinux.org/yay.git"
 cd ${HOME}/yay
 makepkg -si --noconfirm --needed
-sleep 5
 clear
 
 echo "-------------------------------------------------"
 echo "     Installing AUR Pkgs"
 echo "-------------------------------------------------"
+sleep 3
 aurpkgs="polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance"
 
 while ! (echo "1"; echo "1"; echo "1"; echo "1"; echo "y"; echo "\n"; echo "Y"; echo "Y"; yes "Y") | yay -Sy ${aurpkgs}; do
   sleep 10
 done
 (echo "\n"; echo "\n") | yay -Su --cleanafter ${aurpkgs}
-sleep 5
 clear
-
-#OLD WORKING BUT NEEDS CONFIRMATIONS"
-#yay -S polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git libxft-bgra-git brave-bin binance
-#sleep 5	
-#clear
 
 echo "-------------------------------------------------"
 echo "     Installing St Terminal"
 echo "-------------------------------------------------"
+sleep 3
 cd ${HOME}
 git clone "https://github.com/siduck/st.git"
 cd ${HOME}/st
 sudo make install
-sleep 5	
 clear
 
 echo "-------------------------------------------------"
 echo "     Setting up Dotfiles"
 echo "-------------------------------------------------"
-sleep 5
+sleep 3
 cd $HOME
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> .bash_aliases
 echo "dotfiles" >> .gitignore
@@ -140,6 +136,7 @@ sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
 sudo sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
 sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
+sleep 3
 
 echo "-------------------------------------------------------------------"
 echo "Finished Installing Everything...Reboot & Enjoy !!!"
