@@ -43,7 +43,7 @@ aurpkgs="polybar timeshift cava ttf-unifont ttf-symbola otf-symbola ani-cli-git 
 while ! (echo "1"; echo "1"; echo "1"; echo "1"; echo "y"; echo "\n"; echo "Y"; echo "Y"; yes "Y") | yay -Sy ${aurpkgs}; do
   sleep 10
 done
-yay -Su --cleanafter ${aurpkgs}
+(echo "\n"; echo "\n") | yay -Su --cleanafter ${aurpkgs}
 sleep 5
 clear
 
