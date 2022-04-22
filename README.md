@@ -11,7 +11,7 @@ My personal automated arch linux installation script.
 
  ---
 # ⚙️ installation
-**Part: #1** 
+**Part #1:** 
  - **Boot the ISO & run:**
 
     `pacman -Syy && pacman -S git`
