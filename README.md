@@ -6,7 +6,7 @@ My personal automated arch linux installation script.
 
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & pass at the end | Working |
+#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & pass | Working |
 #2 | **sheetal.sh** | installs my choice of de, pkgs & dotfiles | completely unattended | Working |
 
  ---
@@ -20,9 +20,9 @@ My personal automated arch linux installation script.
     
     `bash base.sh`
     
-  - **Note:** You will need to input user & pass at the end of installation.
+ - **Note:** You will need to input user & pass at the end of installation.
   
-  - **Reboot**
+ - At this point, you now have a basic arch linux system. It's up to if you want to install your preferred desktop environment, pkgs, etc. But if you want to replicate my system setup, proceed to Part #2.
     
 **Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
