@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# == ARCH LINUX BASE SYSTEM INSTALLATION == #
-# == PART 2 == #
-
+echo "-------------------------------------------------"
+echo "     Configuring: Timezone | Locale | Host | Hostname"
+echo "-------------------------------------------------"
 # Timezone | Locale | Host | Hostname #
 ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 hwclock --systohc											
@@ -17,10 +17,14 @@ cat <<EOF > /etc/hosts
 127.0.1.1 arch.localdomain  arch
 EOF
 
-# Additional pkgs #
+echo "-------------------------------------------------"
+echo "     Installating Addition Pkgs"
+echo "-------------------------------------------------"
 pacman -S --noconfirm networkmanager git go reflector bash-completion
 
-# Systemd Bootlader Setup #
+echo "-------------------------------------------------"
+echo "     Setting systemd Bootloader"
+echo "-------------------------------------------------"
 bootctl --path=/boot install
 
 cat <<EOF > /boot/loader/loader.conf
@@ -48,9 +52,14 @@ EOF
 #options root=UUID=$UUID rw
 #EOF
 
-# Startup Service #
+echo "-------------------------------------------------"
+echo "     Enabling Internet Connection"
+echo "-------------------------------------------------"
 systemctl enable NetworkManager	
 
+echo "-------------------------------------------------"
+echo "    Setting User Account"
+echo "-------------------------------------------------"
 # User & Password Setup #
 read -p "Enter username: " user
 useradd -m $user
