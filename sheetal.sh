@@ -65,6 +65,7 @@ clear
 echo "-------------------------------------------------"
 echo "     Setting up Dotfiles"
 echo "-------------------------------------------------"
+sleep 5
 cd $HOME
 echo "alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'" >> .bash_aliases
 echo "dotfiles" >> .gitignore
