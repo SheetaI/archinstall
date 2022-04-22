@@ -24,7 +24,7 @@ My personal automated arch linux installation script.
   
   - **Reboot**
     
-**Part: #2**
+**Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
  - **Login and run:**
  
