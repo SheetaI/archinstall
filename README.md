@@ -22,7 +22,7 @@ My personal automated arch linux installation script.
     
  - **Note:** You will need to input user & pass at the end of installation.
   
- - At this point, you now have a basic arch linux system. It's up to if you want to install your preferred desktop environment, pkgs, etc. But if you want to replicate my system setup, proceed to Part #2.
+ - After the first reboot, you now have a basic arch linux system. It's up to if you want to install your preferred desktop environment, pkgs, etc. But if you want to replicate my system setup, proceed to Part #2.
     
 **Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
