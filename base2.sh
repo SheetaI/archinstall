@@ -75,10 +75,9 @@ sed -i '/%wheel/s/^#//' /etc/sudoers
 read -p "Enter password: " pass
 echo -e "$pass\n$pass" | passwd $user
 passwd -l root
-
+cp 
 ## End ##
 echo "-------------------------------------------------------------------"
 echo "Finished Installing Base System...Reboot Now"
 echo "-------------------------------------------------------------------"
 exit
-cp sheetal.sh /mnt/home/sheetal
