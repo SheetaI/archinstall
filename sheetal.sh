@@ -52,7 +52,7 @@ echo "-------------------------------------------------"
 echo "     Initializing Debtap"
 echo "-------------------------------------------------"
 sleep 3
-debtap -U
+sudo debtap -u
 
 echo "-------------------------------------------------"
 echo "     Installing St Terminal"
