@@ -62,6 +62,6 @@ passwd -l root
 
 ## End ##
 echo "-------------------------------------------------------------------"
-echo "Base System Installation Completed...Reboot Now"
+echo "Finished Installing Base System...Reboot Now"
 echo "-------------------------------------------------------------------"
 exit
