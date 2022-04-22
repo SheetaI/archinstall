@@ -35,4 +35,4 @@ My personal automated arch linux installation script.
  - **Done!**
  
 # Important:
- The script is designed to autoloop download of packages if you encountered some errors like disconnections while installing. This will make sure everything is properly downloaded & installed.
+ The script is designed to autoloop download of packages if you encountered some errors. This will make sure everything is properly downloaded & installed.
