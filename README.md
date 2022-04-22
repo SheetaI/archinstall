@@ -30,7 +30,7 @@ My personal automated arch linux installation script.
  
     `bash /sheetal.sh`
  
- - **Note:** It will tell you to reboot when its finished installing everything .   
+ - **Note:** It will tell you to reboot when its finished.   
  
  - **Done!**
  
