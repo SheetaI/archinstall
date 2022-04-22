@@ -26,7 +26,7 @@ My personal automated arch linux installation script.
 
  - **Login and run:**
  
-   `curl -JLO https://raw.githubusercontent.com/SheetaI/archinstall/master/sheetal.sh`
+   `sudo mv /sheetal.sh $HOME`
    
    `bash sheetal.sh`
     
