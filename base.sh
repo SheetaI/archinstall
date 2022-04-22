@@ -86,6 +86,7 @@ echo "    Generating fstab"
 echo "-------------------------------------------------"
 genfstab -U /mnt >> /mnt/etc/fstab
 cp base2.sh /mnt
+cp sheetal.sh /mnt
 
 echo "-------------------------------------------------"
 echo "    Proceeding installation"
