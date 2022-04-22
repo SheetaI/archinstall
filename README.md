@@ -4,14 +4,14 @@ My personal automated arch linux installation script.
  - **Pre-requisites:**
 `Arch Linux ISO` & `Internet Connection`
 
-| Part | Script | Description | Attention | Status | 
+| Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs the base system | prompts user & password creation at the end | Working |
-#2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | prompts for AUR pkgs confirmations | Working |
-#3 | **dev-sheetal.sh** | ongoing project | make pacman loop & auto respond AUR prompts | Not working|
+#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & pass at the end | Working |
+#2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | completely unattended | Working |
+
  ---
 # ⚙️ installation
-**Part: #1**
+**Part: #1** 
  - **Boot the ISO & run:**
 
     `pacman -Syy && pacman -S git`
@@ -20,18 +20,19 @@ My personal automated arch linux installation script.
     
     `bash base.sh`
     
-  - **Reboot the system**  
+  - **Note:** You will need to input user & pass at the end of installation.
+  
+  - **Reboot**
     
 **Part: #2**
 
  - **Login and run:**
  
-   `sudo mv /sheetal.sh $HOME`
-   
-   `bash sheetal.sh`
-    
+    `bash /sheetal.sh`
+ 
+ - **Note:** It will tell you to reboot when its finished installing everything .   
+ 
  - **Done!**
  
- ---
- **Todo:**
-- Work on unattended installation **dev-sheetal.sh**
+# Important:
+ The script is designed to autoloop download of packages if you encountered some errors like disconnections while installing. This will make sure everything is properly downloaded & installed.
