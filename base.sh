@@ -13,7 +13,6 @@ pacman -Sy --noconfirm archlinux-keyring
 loadkeys us
 timedatectl set-ntp true
 
-
 echo "-------------------------------------------------"
 echo "     Partitioning Drive"
 echo "-------------------------------------------------"
