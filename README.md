@@ -39,5 +39,5 @@ My Personal Unattended "Arch Linux" Installer Script.
  - **Done!**
  
 # Important:
- The script is designed to autoloop download of packages if you encountered some errors. This will make sure everything is properly downloaded & installed.
+ The script is designed to autoloop download of packages if it encountered some errors. This will make sure everything is properly downloaded & installed.
  
