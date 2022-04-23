@@ -143,9 +143,10 @@ sudo groupadd -r autologin
 sudo gpasswd -a sheetal autologin
 sudo sed -i "s/^#autologin-user=$/autologin-user=sheetal/" /etc/lightdm/lightdm.conf
 sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/lightdm/lightdm.conf
-sleep 3
+clear
 
 echo "-------------------------------------------------------------------"
 echo "Personalization Finished... Reboot & Enjoy !!!"
 echo "-------------------------------------------------------------------"
+sleep 3
 exit
