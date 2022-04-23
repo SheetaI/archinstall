@@ -6,7 +6,7 @@ My Personal Unattended "Arch Linux" Installer Script.
 
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & pass | Working |
+#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & password | Working |
 #2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | completely unattended | Working |
 
  ---
@@ -26,7 +26,7 @@ My Personal Unattended "Arch Linux" Installer Script.
     
     `bash base.sh`
     
- - **Note:** You will need to input user & pass at the end of installation.
+ - **Note:** Requires to input user & pass at the end of installation.
       
 **Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
