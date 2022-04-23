@@ -69,6 +69,6 @@ sleep 3
 
 ## End ##
 echo "-------------------------------------------------------------------"
-echo "Finished Installing Base System...Reboot Now"
+echo "Base System Installation Finished...Reboot Now"
 echo "-------------------------------------------------------------------"
 exit
