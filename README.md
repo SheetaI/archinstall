@@ -1,10 +1,6 @@
 # archinstall
 My Personal Unattended "Arch Linux" Installer Script.
 
-My Hardware: IntelCPU/AmdGPU/SSD combo.
-
-**Reminder:** If we have different hardware, please configure the script accordingly.
-
 ---
 # contents
 
@@ -31,11 +27,7 @@ My Hardware: IntelCPU/AmdGPU/SSD combo.
     `bash base.sh`
     
  - **Note:** You will need to input user & pass at the end of installation.
-  
- - After the first reboot, you now have a basic arch linux system.
- 
- - If you want to replicate my personal setup, proceed to part #2.
-    
+      
 **Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
  - **Login and run:**
