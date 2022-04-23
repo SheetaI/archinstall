@@ -3,7 +3,7 @@ My Personal Unattended "Arch Linux" Installer Script.
 
 My Hardware: Intel/Amd/SSD combo.
 
-
+**Reminder:** If we have different hardware, please configure the script accordingly.
 
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
@@ -17,6 +17,7 @@ My Hardware: Intel/Amd/SSD combo.
  - **Pre-requisites:**
 `Arch Linux ISO` & `Internet Connection`
 
+
 **Part #1:** 
  - **Boot the ISO & run:**
 
@@ -28,7 +29,9 @@ My Hardware: Intel/Amd/SSD combo.
     
  - **Note:** You will need to input user & pass at the end of installation.
   
- - After the first reboot, you now have a basic arch linux system. You have the freedom to install your own de, pkgs, etc. If you want to replicate my personal setup, proceed to part #2.
+ - After the first reboot, you now have a basic arch linux system.
+ 
+ - If you want to replicate my personal setup, proceed to part #2.
     
 **Part #2:** Setup preview here: https://github.com/SheetaI/dotfiles
 
