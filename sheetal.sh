@@ -146,6 +146,6 @@ sudo sed -i "s/^#autologin-user-timeout=0$/autologin-user-timeout=0/" /etc/light
 sleep 3
 
 echo "-------------------------------------------------------------------"
-echo "Finished Installing Personalization...Reboot & Enjoy !!!"
+echo "Personalization Finished... Reboot & Enjoy !!!"
 echo "-------------------------------------------------------------------"
 exit
