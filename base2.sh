@@ -65,7 +65,7 @@ sed -i '/%wheel/s/^#//' /etc/sudoers
 read -p "Enter password: " pass
 echo -e "$pass\n$pass" | passwd $user
 passwd -l root
-sleep 3
+clear
 
 ## End ##
 echo "-------------------------------------------------------------------"
