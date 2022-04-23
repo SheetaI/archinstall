@@ -5,6 +5,9 @@ My Hardware: IntelCPU/AmdGPU/SSD combo.
 
 **Reminder:** If we have different hardware, please configure the script accordingly.
 
+---
+# contents
+
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
 #1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & pass | Working |
