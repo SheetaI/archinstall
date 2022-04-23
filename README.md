@@ -1,8 +1,9 @@
 # archinstall
-My personal automated arch linux installation script.
+My Personal Unattended "Arch Linux" Installer Script.
 
- - **Pre-requisites:**
-`Arch Linux ISO` & `Internet Connection`
+My Hardware: Intel/Amd/SSD combo.
+
+
 
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
@@ -10,7 +11,12 @@ My personal automated arch linux installation script.
 #2 | **sheetal.sh** | installs my choice of de, pkgs & dotfiles | completely unattended | Working |
 
  ---
+
 # ⚙️ installation
+
+ - **Pre-requisites:**
+`Arch Linux ISO` & `Internet Connection`
+
 **Part #1:** 
  - **Boot the ISO & run:**
 
@@ -36,3 +42,4 @@ My personal automated arch linux installation script.
  
 # Important:
  The script is designed to autoloop download of packages if you encountered some errors. This will make sure everything is properly downloaded & installed.
+ 
