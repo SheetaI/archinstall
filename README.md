@@ -1,7 +1,7 @@
 # archinstall
 My Personal Unattended "Arch Linux" Installer Script.
 
-My Hardware: Intel/AmdGPU/SSD combo.
+My Hardware: IntelCPU/AmdGPU/SSD combo.
 
 **Reminder:** If we have different hardware, please configure the script accordingly.
 
