@@ -28,7 +28,7 @@ My Personal Unattended "Arch Linux" Installer Script.
     
  - **Note:** Requires to input user & pass at the end of installation.
       
-**Part #2:** [Click here to preview](https://github.com/SheetaI/dotfiles)
+**Part #2:** [Click here to preview my setup](https://github.com/SheetaI/dotfiles)
 
  - **Login and run:**
  
