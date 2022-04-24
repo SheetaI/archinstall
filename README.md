@@ -6,7 +6,7 @@ My Personal Unattended "Arch Linux" Installer Script.
 
 | Part | Script | Description | Attention | Status |
 :-- | :--: | :--: | :--: | :--: |
-#1 | **base.sh** & **base2.sh** | installs arch linux base system  | only prompts for user & password | working |
+#1 | **base.sh** & **base2.sh** | installs arch linux base system  | prompts for user & password | working |
 #2 | **sheetal.sh** | installs my choice of pkgs & dotfiles | completely unattended | working |
 
  ---
