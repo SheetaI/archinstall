@@ -60,7 +60,7 @@ echo "     Installing St Terminal"
 echo "-------------------------------------------------"
 sleep 3
 cd ${HOME}
-git clone "https://github.com/siduck/st.git"
+git clone "https://github.com/SheetaI/st.git"
 cd ${HOME}/st
 sudo make install
 clear
