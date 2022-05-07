@@ -130,6 +130,13 @@ sudo ln -s /usr/share/fontconfig/conf.avail/10-sub-pixel-rgb.conf /etc/fonts/con
 clear
 
 echo "-------------------------------------------------"
+echo "     Enabling Keychron Fn Keys"
+echo "-------------------------------------------------"
+cd $HOME
+echo "options hid_apple fnmode=0" | sudo tee /etc/modprobe.d/hid_apple.conf
+sudo mkinitcpio -P
+
+echo "-------------------------------------------------"
 echo "     Enabling Startup Services"
 echo "-------------------------------------------------"
 cd $HOME
