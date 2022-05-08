@@ -10,7 +10,6 @@ echo "-------------------------------------------------"
 sleep 3
 sed -i "s/^#ParallelDownloads = 5$/ParallelDownloads = 15/" /etc/pacman.conf
 pacman -Sy --noconfirm archlinux-keyring
-pacman-key --refresh-keys
 loadkeys us
 timedatectl set-ntp true
 
