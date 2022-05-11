@@ -18,7 +18,7 @@ cat <<EOF > /etc/hosts
 EOF
 
 echo "-------------------------------------------------"
-echo "     Installing Addition Pkgs"
+echo "     Installing Additional Pkgs"
 echo "-------------------------------------------------"
 sleep 3
 addpkgs="networkmanager git go reflector bash-completion"
