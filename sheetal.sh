@@ -99,7 +99,7 @@ echo "    Miscellaneous"
 echo "-------------------------------------------------"
 cd $HOME
 # gedit theme
-sudo cp $HOME/.local/share/gedit/styles/xonedark.xml /usr/share/gtksourceview-4/styles/
+sudo cp $HOME/.local/share/gedit/styles/darkmacs.xml /usr/share/gtksourceview-4/styles/
 # Additional Directories #
 mkdir -p {Music,Videos}
 mkdir -p Pictures/Screenshots
