@@ -62,7 +62,7 @@ echo "-------------------------------------------------"
 sleep 3
 genfstab -U /mnt >> /mnt/etc/fstab
 cp base2.sh /mnt
-cp sheetal.sh /mnt
+cp personal.sh /mnt
 
 echo "-------------------------------------------------"
 echo "    Proceeding installation"
