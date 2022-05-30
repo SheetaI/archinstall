@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "-------------------------------------------------"
-echo "    SHEETAL'S BASE SYSTEM INSTALLATION SCRIPT"
+echo "     BASE SYSTEM INSTALLATION SCRIPT"
 echo "-------------------------------------------------"
 
 echo "-------------------------------------------------"
