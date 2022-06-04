@@ -36,10 +36,8 @@ My Personal Unattended "Arch Linux" Installer Script.
  
     `bash /personal.sh`
  
- - **Note:** It will tell you to reboot when its finished.   
- 
- - **Done!**
- 
+ - **Note:** It will tell you to reboot when everything is done.   
+  
 # Important:
  The script is designed to autoloop download of packages if it encountered some errors. This will make sure everything is properly downloaded & installed.
  
