@@ -22,7 +22,7 @@ My Personal Unattended "Arch Linux" Installer Script.
 
     `pacman -Syy && yes | pacman -S git`
 
-    `git clone https://github.com/SheetaI/archinstall && cd archinstall`
+    `git clone https://github.com/devjessah/archinstall && cd archinstall`
     
     `bash base.sh`
     
