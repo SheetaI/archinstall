@@ -30,7 +30,7 @@ My Personal Unattended "Arch Linux" Installer Script.
       
 **Part #2:** [Click here to preview my setup](https://github.com/devjessah/dotfiles)
 
-     Warning: If you are not me, please configure personal.sh accordingly if you wish to proceed without any conflicts.
+  *Warning: If you are not me, please configure personal.sh accordingly if you wish to proceed without any conflicts.*
     
  - **Login and run:**
  
