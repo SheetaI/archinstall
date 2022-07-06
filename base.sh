@@ -61,13 +61,13 @@ echo "    Generating fstab"
 echo "-------------------------------------------------"
 sleep 3
 genfstab -U /mnt >> /mnt/etc/fstab
-cp base2.sh /mnt
-cp personal.sh /mnt
 
 echo "-------------------------------------------------"
 echo "    Proceeding installation"
 echo "-------------------------------------------------"
 sleep 3
+cp base2.sh /mnt
+cp personal.sh /mnt
 chmod +x /mnt/base2.sh
 arch-chroot /mnt /bin/bash -c ./base2.sh
 
