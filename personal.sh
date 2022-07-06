@@ -18,12 +18,12 @@ echo "-------------------------------------------------"
 echo "     Installing Pacman Pkgs"
 echo "-------------------------------------------------"
 sleep 3
-pkg_list="xorg xorg-xinit nvidia nvidia-utils lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst neovim gedit libreoffice galculator htop maim pulseaudio pulseaudio-alsa alsa alsa-utils powerline powerline-fonts youtube-dl ueberzug sxiv qbittorrent gimp veracrypt obsidian bleachbit gnome-disk-utility"
+pacpkgs="xorg xorg-xinit nvidia nvidia-utils lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings neofetch firewalld bspwm sxhkd rofi feh lxsession lxappearance thunar ranger picom firefox mpd mpc ncmpcpp udisks2 udiskie thunar-archive-plugin file-roller dunst neovim gedit libreoffice galculator htop maim pulseaudio pulseaudio-alsa alsa alsa-utils powerline powerline-fonts youtube-dl ueberzug sxiv qbittorrent gimp veracrypt obsidian bleachbit gnome-disk-utility"
 
-while ! sudo pacman -Syuw --noconfirm ${pkg_list}; do
+while ! sudo pacman -Syuw --noconfirm ${pacpkgs}; do
   sleep 10
 done
-sudo pacman -Su --noconfirm ${pkg_list}
+sudo pacman -Su --noconfirm ${pacpkgs}
 clear
 
 echo "-------------------------------------------------"
@@ -98,8 +98,10 @@ echo "-------------------------------------------------"
 echo "    Miscellaneous"
 echo "-------------------------------------------------"
 cd $HOME
+
 # gedit theme
 sudo cp $HOME/.local/share/gedit/styles/darkmacs.xml /usr/share/gtksourceview-4/styles/
+
 # Additional Directories #
 mkdir -p {Music,Videos}
 mkdir -p Pictures/Screenshots
